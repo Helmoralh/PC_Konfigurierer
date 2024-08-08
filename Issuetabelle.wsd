@@ -1,0 +1,17 @@
+@startuml Issuetabelle
+left to right direction
+skinparam packagestyle table
+
+object Issues {
+    <#lightblue,#black>|=  ToDo  |=  Besprechen  |=  Doing  |=  Done  |
+    <#white>| <#red><color:White> Planung Klassendiagramm |  |  |  |
+    <#white>| <#yellow> Umsetzung Klassendiagramm |  |  |  |
+    <#white>| <#red><color:White><b> Planung |  |  |  |
+    <#white>| <#yellow> Umsetzung |  |  |  
+    <#white>| <#red><color:White> Planung |  |  |  
+    <#white>| <#yellow> Umsetzung |  |  |  
+    <#white>| <#red><color:White> Planung |  |  |  
+    <#white>| <#yellow> Umsetzung |  |  | 
+    <#white>|  |  |  | <#yellow>Erstellung GitHub |
+}
+@enduml
