@@ -1,0 +1,16 @@
+@startuml Zustandsdiagramm
+[*] --> Stadium1 : PC wird konfiguriert
+Stadium1 --> [*] : PC wird mit dieser Komponente verkauft
+Stadium1 : Genügend Komponeten sind verfügbar
+Stadium1 : + do: Komponente kann bei der Konfiguration ausgewählt werden
+
+Stadium2 --> [*] : PC wird ohne diese Komponente verkauft
+Stadium2 : Komponente is zurzeit nicht mehr verfügbar
+Stadium2 : + entry: Komponente kann bei der Konfiguration nicht mehr ausgewählt werden
+Stadium1 -> Stadium2 : Inventur
+
+Stadium3 --> [*] : PC wird mit dieser Komponente verkauft
+Stadium2 -> Stadium3 : Inventur
+Stadium3 : Es sind neue Komponeten im Lager eingetroffen
+Stadium3 : + entry: Komponente kann bei der Konfiguration ausgewählt werden
+@enduml

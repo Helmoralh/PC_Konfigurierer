@@ -1,0 +1,31 @@
+@startuml Anwendungsfalldiagramm
+left to right direction
+actor Kunde as k
+actor Angestellter as a
+
+package PC-Bestellung {
+  usecase "PC-Bestellen" as UC1
+  usecase "Konfigurierung ändern" as UC2
+  usecase "PC-Bestellung abschließen und bezahlen" as UC3
+  usecase "PC-Grunkonfiguration erstellen" as UC4
+  usecase "Änderungskomponenten einstellen" as UC5
+  usecase "Produkt entfernen" as UC6
+  usecase "Authentifizieren -> Passwort eingabe" as UC7
+  usecase "Angestellten Account vorrübergehend sperren" as UC8
+  note left of UC8 : Das passiert nur wenn das Passwort 3-mal falsch eingeben wurde.
+  note right of UC2 : Die Grunkonfiguration des PC kann den Wünschen angepasst werden.
+}
+
+k --> UC1
+UC1 ..> UC3 :includes
+UC1 ..> UC2 :extends
+UC2 ..> UC3 :includes
+a --> UC4
+a--> UC5
+a --> UC6
+UC4 ..> UC7 :includes
+UC5 ..> UC7 :includes
+UC6 ..> UC7 :includes
+UC8 ..> UC7 :extends
+
+@enduml

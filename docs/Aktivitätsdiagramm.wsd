@@ -1,0 +1,21 @@
+@startuml Aktivitätsdiagramm
+start
+repeat
+  :Test: " Ist die geänderte PC-Komponete kompatibel ?";
+    if (kompatibel?) then (yes)
+      #green:SUPER;
+      break
+    endif
+    ->no;
+    #red:Alert "Die Komponete ist leider nicht kompatibel";
+repeat while (Möchten sie mit der ursprünglichen Einstellung fortfahren?) is (no) not (yes)
+
+#green:Alert:"Die Komponete ist kompatibel";
+ if (Möchten sie noch mehr Komponeten verändern ?) then (yes)
+   #yellow: Alert: "Verändern sie erneut eine Komponete !";
+stop
+ else (no) 
+   : Alert: "der Änderungsvorgang wird beendet";
+   #green: Alert: "Ihr PC ist FERTIG !!!";
+stop
+@enduml
