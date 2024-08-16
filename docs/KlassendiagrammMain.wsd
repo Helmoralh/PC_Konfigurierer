@@ -1,0 +1,50 @@
+@startuml MainDIa
+Kunde -- PCKonfigurator
+PCKonfigurator -- Settings
+PCKonfigurator --  LagerWorker
+PCKonfigurator <|-- PC
+
+
+Kunde : Name : string
+Kunde : Adresse : string
+Kunde : + getName ()
+Kunde : + getAdresse ()
+Kunde : + void setName ()
+Kunde : + void setAdresse ()
+
+PCKonfigurator : PcName : string
+PCKonfigurator : + getPcName ()
+PCKonfigurator : + void setPcName ()
+
+Settings : LagerName : string
+Settings : Passwort : string
+Settings : IpAdresse : int
+Settings : Server : string
+Settings : + getLagerName ()
+Settings : + getPasswort ()
+Settings : + getIpAdresse ()
+Settings : + getServer ()
+Settings : + void setLagerName ()
+Settings : + void setPasswort ()
+Settings : + void setIpAdresse ()
+Settings : + void setServer ()
+Settings : + Load ()
+Settings : + Save ()
+
+LagerWorker : Lager : List<PCKomponente>
+LagerWorker : + getLager ()
+LagerWorker : + accessLager ()
+LagerWorker : + BestelleKomponente ()
+LagerWorker : + getLagerEntry ()
+LagerWorker : + void setLager ()
+
+PC : Name : string
+PC : PcArt : string
+PC : Komponenten : List<PCKomponente>
+PC : + getName ()
+PC : + getPcArt ()
+PC : + getKomponenten ()
+PC : + void setName ()
+PC : + void setPcArt ()
+PC : + void setKomponenten ()
+@enduml

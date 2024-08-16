@@ -1,0 +1,95 @@
+@startuml PcKomponentenDia
+
+PCKomponente <|-- CPU
+PCKomponente <|-- GPU
+PCKomponente <|-- PSU
+PCKomponente <|-- RAM
+PCKomponente <|-- Festplatte
+PCKomponente <|-- KÜH
+PCKomponente <|-- MB
+PCKomponente <|-- Gehäuse
+
+PCKomponente --  LagerWorker
+
+PC "1" *-- "many" PCKomponente
+
+CPU : Hertz : double
+CPU : Kerne : int
+CPU : + getHertz()
+CPU : + getKerne()
+CPU : + void setHertz() 
+CPU : + void setKerne() 
+
+GPU : Speicher : int
+GPU : Shaderanzahl : int
+GPU : + getSpeicher()
+GPU : + getShaderanzahl()
+GPU : + void setSpeicher() 
+GPU : + void setShaderanzahl() 
+
+PSU : Watt : int
+PSU : + getwatt()
+PSU : + void setwatt() 
+ 
+RAM : Kapazität : int
+RAM : Schnittstelle : int
+RAM : + getKapazität()
+RAM : + getSchnittstelle()
+RAM : + void setKapazität() 
+RAM : + void setSchnittstelle() 
+
+Festplatte : Art : string
+Festplatte : Größe : int
+Festplatte : + getArt()
+Festplatte : + getGröße()
+Festplatte : + void setArt() 
+Festplatte : + void setGröße() 
+
+KÜH : Leistung : int
+KÜH : Sorte : string
+KÜH : + getLeistung()
+KÜH : + getSorte()
+KÜH : + void setLeistung() 
+KÜH : + void setSorte() 
+
+MB : CPUSchnittstelle : string
+MB : GPUSchnittstelle : string
+MB : + getCPUSchnittstelle()
+MB : + getGPUSchnittstelle()
+MB : + void setCPUSchnittstelle() 
+MB : + void setGPUSchnittstelle() 
+
+Gehäuse : Farbe : string
+Gehäuse : Material : string
+Gehäuse : + getFarbe()
+Gehäuse : + getMaterial()
+Gehäuse : + void setFarbe()
+Gehäuse : + void setMaterial()
+
+LagerWorker : Lager : List<PCKomponente>
+LagerWorker : + getLager ()
+LagerWorker : + accessLager ()
+LagerWorker : + BestelleKomponente ()
+LagerWorker : + getLagerEntry ()
+LagerWorker : + void setLager ()
+
+PCKomponente : Seriennummer : string
+PCKomponente : Name : string
+PCKomponente : + getSeriennummer ()
+PCKomponente : + getName ()
+PCKomponente : + void setSeriennummer ()
+PCKomponente : + void setName ()
+PCKomponente : + testkompatibility ()
+PCKomponente : Ereignis : onkompatibilty at
+
+PC : Name : string
+PC : PcArt : string
+PC : Komponenten : List<PCKomponente>
+PC : + getName ()
+PC : + getPcArt ()
+PC : + getKomponenten ()
+PC : + void setName ()
+PC : + void setPcArt ()
+PC : + void setKomponenten ()
+
+@enduml
