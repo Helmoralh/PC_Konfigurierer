@@ -5,7 +5,7 @@ skinparam packagestyle table
 object Farbzuweisung {
     hellgrün : Moritz
     gelb : Phillip
-    weiß : Moritz  Phillip
+    weiß : Moritz & Phillip
 }
 
 object Issues {
