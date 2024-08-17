@@ -2,16 +2,24 @@
 left to right direction
 skinparam packagestyle table
 
+object Farbzuweisung {
+    hellgrün : Moritz
+    gelb : Phillip
+    weiß : Moritz  Phillip
+}
+
 object Issues {
     <#lightblue,#black>|=  ToDo  |=  Besprechen  |=  Doing  |=  Done  |
-    <#white>| <#red><color:White> Planung Klassendiagramm |  |  |  |
-    <#white>| <#yellow> Umsetzung Klassendiagramm |  |  |  |
-    <#white>| <#red><color:White><b> Planung |  |  |  |
-    <#white>| <#yellow> Umsetzung |  |  |  
-    <#white>| <#red><color:White> Planung |  |  |  
-    <#white>| <#yellow> Umsetzung |  |  |  
-    <#white>| <#red><color:White> Planung |  |  |  
-    <#white>| <#yellow> Umsetzung |  |  | 
-    <#white>|  |  |  | <#yellow>Erstellung GitHub |
+    <#white>|  |  |  | <#white> Planung Präsentation |  
+    <#white>|  |  |  | <#white> Erstellung Präsentation |  
+    <#white>|  |  |  | <#lightgreen> Erstellung GitHub |
+    <#white>|  |  |  | <#yellow> Planung Diagramme |
+    <#white>|  |  |  | <#lightgreen> Umsetzung Diagramme |
+    <#white>| <#lightgreen> Erstellung Komponentenlogik (Code) |  |  |  |
+    <#white>| <#lightgreen> Erstellung Main (Code und Form) |  |  |  
+    <#white>| <#lightgreen> Erstellung Settings (Code und Form) |  |  | 
+    <#white>| <#yellow> Erstellung Komponentenbeispieldaten |  |  |  
+    <#white>| <#yellow> Erstellung Komponentenklassen (Code) | | | |
+    <#white>| <#yellow> Erstellung Komponentenkonfiguratoren (Form) |  |  |  |
 }
 @enduml
