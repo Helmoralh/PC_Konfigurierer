@@ -2,7 +2,7 @@
 Kunde -- PCKonfigurator
 PCKonfigurator -- Settings
 PCKonfigurator --  LagerWorker
-PCKonfigurator <|-- PC
+PCKonfigurator "1" *-- "many" PC
 
 
 Kunde : Name : string
@@ -12,9 +12,10 @@ Kunde : + getAdresse ()
 Kunde : + void setName ()
 Kunde : + void setAdresse ()
 
-PCKonfigurator : PcName : string
-PCKonfigurator : + getPcName ()
-PCKonfigurator : + void setPcName ()
+PCKonfigurator : PCList : List<PC>
+PCKonfigurator : + getPCList ()
+PCKonfigurator : + getPCEntry ()
+PCKonfigurator : + void setPCList ()
 
 Settings : LagerName : string
 Settings : Passwort : string
@@ -33,10 +34,10 @@ Settings : + Save ()
 
 LagerWorker : Lager : List<PCKomponente>
 LagerWorker : + getLager ()
-LagerWorker : + accessLager ()
-LagerWorker : + BestelleKomponente ()
 LagerWorker : + getLagerEntry ()
 LagerWorker : + void setLager ()
+LagerWorker : + accessLager ()
+LagerWorker : + BestelleKomponente ()
 
 PC : Name : string
 PC : PcArt : string
